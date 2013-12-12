@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Calculate &#8226; Base-2 &#8226; A tool to help you learn and test your binary knowledge</title>
+  <meta name="author" content="James Turner">
+  <meta name="description" content="A tool to help you learn and test your binary knowledge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <!--[if IE]>
+    <script src="../assets/js/modernizr.min.js"></script>
+  <![endif]-->
+</head>
+<body class="calculate">
+  <div class="wrapper">
+    <header id="site-header">
+      <div>
+        <a href="../" title="Home"><h1 id="site-title">Base-2</h1></a>
+        <span id="site-tagline">A tool to help you learn and test your binary knowledge</span>
+        <span id="site-super">by James Turner</span>
+      </div>
+      <nav id="site-nav">
+        <ul>
+          <li class="home"><a href="../"><img src="../assets/img/home-icon.png" alt="Home"></a></li><!--
+       --><li class="learn"><a href="../learn">Learn</a></li><!--
+       --><li class="test"><a href="../test">Test</a></li><!--
+       --><li class="calculate current"><a href="../calculate">Calculate</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <p>Click on the bits to toggle their values between 1 and 0.</a></p>
+      <table id="calculate-table">
+        <thead>
+          <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-binary-value="128" class="binValue">0</td>
+            <td data-binary-value="64" class="binValue">0</td>
+            <td data-binary-value="32" class="binValue">0</td>
+            <td data-binary-value="16" class="binValue">0</td>
+            <td data-binary-value="8" class="binValue">0</td>
+            <td data-binary-value="4" class="binValue">0</td>
+            <td data-binary-value="2" class="binValue">0</td>
+            <td data-binary-value="1" class="binValue">0</td>
+          </tr>
+        </tbody>
+      </table>
+      Total = <strong><span id="total">0</span></strong>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var cells = document.getElementsByClassName("binValue");
+
+      for ( var i = 0; i < cells.length; i++ ) {
+        cells[i].addEventListener("click", function () {
+          this.innerHTML = this.innerHTML === "1" ? "0" : "1";
+          recalculate();
+        });
+      }
+
+      function recalculate() {
+        total = 0;
+        for ( var i = 0; i < cells.length; i++ ) {
+          if ( cells[i].innerHTML === "1" ) {
+            total += parseInt(cells[i].getAttribute("data-binary-value"), 10);
+          }
+        }
+        document.getElementById("total").innerHTML = total;
+      }
+    })();
+  </script>
+</body>
+</html>
+

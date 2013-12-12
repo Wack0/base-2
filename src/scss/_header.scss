@@ -1,0 +1,36 @@
+#site-header {
+  margin: 30px 0;
+  text-align: center;
+
+  div {
+    display: inline-block;  
+    position: relative;
+  }
+
+  a {
+    @extend .plain-link;
+    @include transition(color 0.15s ease);
+    &:hover,
+    &:focus {
+      color: lighten($body-text-c, 25%);
+    }
+  }
+}
+
+#site-title {
+  font-size: 2.375em;
+  font-weight: 400;
+}
+
+#site-tagline,
+#site-super {
+  font-size: 0.875em;
+}
+
+#site-super {
+  color: #b5b5b5;
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  text-align: right;
+}

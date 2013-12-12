@@ -1,0 +1,22 @@
+.next-page {
+  text-align: right;
+  &:after {
+    content: " \203A";
+  }
+}
+
+p {
+  margin: 10px 0;
+}
+
+code {
+  line-height: 1.8;
+}
+
+// Body
+& {
+}
+
+h2 {
+  font-size: 1em;
+}

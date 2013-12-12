@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Learn &#8226; Base-2 &#8226; A tool to help you learn and test your binary knowledge</title>
+  <meta name="author" content="James Turner">
+  <meta name="description" content="A tool to help you learn and test your binary knowledge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <!--[if IE]>
+    <script src="../assets/js/modernizr.min.js"></script>
+  <![endif]-->
+</head>
+<body class="learn">
+  <div class="wrapper">
+    <header id="site-header">
+      <div>
+        <a href="../" title="Home"><h1 id="site-title">Base-2</h1></a>
+        <span id="site-tagline">A tool to help you learn and test your binary knowledge</span>
+        <span id="site-super">by James Turner</span>
+      </div>
+      <nav id="site-nav">
+        <ul>
+          <li class="home"><a href="../"><img src="../assets/img/home-icon.png" alt="Home"></a></li><!--
+       --><li class="learn current"><a href="../learn">Learn</a></li><!--
+       --><li class="test"><a href="../test">Test</a></li><!--
+       --><li class="calculate"><a href="../calculate">Calculate</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <nav id="page-toggle">
+        <ul>
+          <li class="current">
+            <a href="../learn">Introduction</a>
+          </li>
+          <li>
+            <a href="examples">Examples</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>What is binary?</h1>
+      <p>Before we get into what binary is, we'll start with something you should be more familiar with. Decimal is the number system that we use almost universally when dealing with numbers.</p>
+      <p>Decimal is also known as base 10, meaning each column can take 1 of 10 possible values (0 to 9).</p>
+      <p>Take the number 105 for example. We can break the number down into columns that represent each digit's power of ten.</p>
+      <table>
+        <thead>
+          <tr>
+            <td>100s</td>
+            <td>10s</td>
+            <td>1s</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>We can represent the same number in binary...</p>
+      <p>Binary works in exactly the same way as decimal except it works in base 2, meaning that each column can only take 1 of 2 values (0 or 1).</p>
+      <p>We can break the number down into columns that represent each digit's power of two, and then work out what the number is (which should come to 105).</p>
+      <table>
+        <thead>
+          <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>We can prove this by adding up the values in the same way we would with decimal...</p>
+      <pre><code>0 x 128
+1 x 64
+1 x 32
+0 x 16
+1 x 8
+0 x 4 
+0 x 2
+1 x 1
+= 64 + 32 + 8 + 1 
+= <strong>105</strong>
+      </code></pre>
+      <p class="next-page">If you think you got all of that, move on to some <a href="examples">examples</a></p>
+    </div>
+  </div>
+</body>
+</html>

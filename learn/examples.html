@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Learn &#8226; Base-2 &#8226; A tool to help you learn and test your binary knowledge</title>
+  <meta name="author" content="James Turner">
+  <meta name="description" content="A tool to help you learn and test your binary knowledge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <!--[if IE]>
+    <script src="../assets/js/modernizr.min.js"></script>
+  <![endif]-->
+</head>
+<body class="learn">
+  <div class="wrapper">
+    <header id="site-header">
+      <div>
+        <a href="../" title="Home"><h1 id="site-title">Base-2</h1></a>
+        <span id="site-tagline">A tool to help you learn and test your binary knowledge</span>
+        <span id="site-super">by James Turner</span>
+      </div>
+      <nav id="site-nav">
+        <ul>
+          <li class="home"><a href="../"><img src="../assets/img/home-icon.png" alt="Home"></a></li><!--
+       --><li class="learn current"><a href="../learn">Learn</a></li><!--
+       --><li class="test"><a href="../test">Test</a></li><!--
+       --><li class="calculate"><a href="../calculate">Calculate</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <nav id="page-toggle">
+        <ul>
+          <li>
+            <a href="../learn">Introduction</a>
+          </li>
+          <li class="current">
+            <a href="examples">Examples</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>Some Examples</h1>
+      <h2>Example 1</h2>
+      <p>Decimal number: 127</p>
+      <table>
+        <thead>
+          <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code>0 x 128
+1 x 64
+1 x 32
+1 x 16
+1 x 8
+1 x 4 
+1 x 2
+1 x 1
+= 64 + 32 + 16 + 8 + 4 + 2 + 1 
+= <strong>127</strong>
+      </code></pre>
+      <h2>Example 2</h2>
+      <p>Decimal number: 55</p>
+      <table>
+        <thead>
+          <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code>0 x 128
+0 x 64
+1 x 32
+1 x 16
+0 x 8
+1 x 4 
+1 x 2
+1 x 1
+= 32 + 16 + 4 + 2 + 1 
+= <strong>55</strong>
+      </code></pre>
+      <h2>Example 3</h2>
+      <p>Decimal number: 71</p>
+      <table>
+        <thead>
+          <tr>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre><code>0 x 128
+1 x 64
+0 x 32
+0 x 16
+0 x 8
+1 x 4 
+1 x 2
+1 x 1
+= 64 + 4 + 2 + 1
+= <strong>71</strong>
+      </code></pre>
+      <p class="next-page">Feeling confident? Take a <a href="../test">test</a></p>
+    </div>
+  </div>
+</body>
+</html>

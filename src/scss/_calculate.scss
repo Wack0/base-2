@@ -1,0 +1,44 @@
+#calculate-table {
+  tbody td {
+    -moz-user-select: -moz-none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+     -o-user-select: none;
+     user-select: none;
+    &:hover {
+      box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.22);
+      color: white;
+      font-weight: 600;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      background: $calculate-c;
+      border-bottom: 1px solid gray;
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: inset 0 2px 18px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  td {
+    border-color: #8A8A8A;
+  }
+
+  td {
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  thead tr:first-child td {
+    border-top: none;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+}

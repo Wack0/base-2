@@ -1,0 +1,111 @@
+form {
+  margin: 10px 0;
+
+  .difficulty-desc {
+    strong {
+      font-weight: 600;
+    }
+    font-style: italic;
+    font-size: 0.875em;
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+
+  & #create-custom-test-form,
+  & #create-test-form {
+    input[type="submit"] {
+        margin: 15px 0;
+    }
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  select {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  textarea {
+    min-width: 500px;
+    resize: vertical;
+  }
+}
+
+#message-side {
+  display: inline-block;
+  span {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.875em;
+  }
+  margin: 10px 0;
+
+}
+
+#char-count {
+  &.invalid {
+    color: red;
+  }
+  color: #7E7E7E;
+}
+
+#invalid-list {
+  background: #FFD8D8;
+  border: 1px solid #F17A7A;
+  padding: 10px;
+  ul {
+    list-style: inside square;
+  }
+}
+
+.test-setting {
+  margin: 10px 0;
+  color: #A5A5A5;
+  display: inline-block;
+}
+
+#start-test-form {
+  a {
+    margin-left: 10px;
+  }
+}
+
+#question-list {
+  list-style-position: inside;
+  li {
+    margin: 20px 0;
+    span:first-child {
+      font-weight: 700;
+    }
+  }
+  .correct {
+    color: #18C500;
+  }
+  .incorrect {
+    color: red;
+  }
+}
+
+.percentage {
+  color: $body-text-c;
+  font-weight: 700;
+}
+
+#start-test-form {
+  input[type="submit"] {
+    margin: 0;
+  }
+}
+
+.answer-format {
+  display: block;
+  font-size: 0.875em;
+  font-style: italic;
+}

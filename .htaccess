@@ -1,0 +1,23 @@
+# Rewrite the URLs to not require the .php and .html file extensions.
+RewriteEngine on
+
+# RewriteBase /
+RewriteBase /base-2
+
+RewriteRule ^learn/examples learn/examples.html [L]
+RewriteRule ^test/create test/create.php [L]
+RewriteRule ^test/results test/results.php [L]
+RewriteRule ^test/score test/score.php [L]
+
+# Rewrite the /test/?testid=123 and /test/results.php?testid=123 querystrings.
+RewriteRule ^test/(\d*)$ test/?testid=$1 [L,QSA]
+RewriteRule ^test/(\d*)/results$ test/results?testid=$1 [L,QSA]
+RewriteRule ^test/(\d*)/score$ test/score?testid=$1 [L,QSA]
+
+# Remove the trailing slash on all URLs
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} (.*)$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+# RewriteRule ^(.+)/$ /$1 [R,L]

@@ -1,0 +1,55 @@
+@media (max-width: 760px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  #site-nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  #site-header {
+    margin: 10px 0;
+  }
+
+  #site-nav {
+    li a {
+      width: auto;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .home {
+      display: none;
+    }
+  }
+  #site-super {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    position: static;
+  }
+
+  #message-side {
+    span {
+      display: none;
+    }
+  }
+
+  #message {
+    min-width: auto;
+    margin-top: 0;
+  }
+
+  #home-nav {
+    .nav-item {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      a {
+        padding: 10px;
+      }
+    }
+  }
+}
