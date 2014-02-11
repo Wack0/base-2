@@ -29,6 +29,7 @@ class CreateResult extends Result {
       $answer = $questions[$i]["question_answer"];
       $questionID = $questions[$i]["question_id"];
       $userAnswer = (trim($userAnswers[$i]) === "" ? null : trim($userAnswers[$i]));
+      $userAnswer = htmlentities($userAnswer,ENT_QUOTES); // XSS is bad, ok? :)
 
       if ( $this->isCorrectAnswer($answer, $userAnswer) ) {
         $result = 1;
