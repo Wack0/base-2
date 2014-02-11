@@ -16,7 +16,7 @@ class CreateTest extends Test {
     // As long as the name isn't blank and is also less than 70 chars long
     // set the teacher name property.
     if ( $name != "" && strlen($name) <= 70 ) {
-      $this->teacherName = $name;
+      $this->teacherName = htmlentities($name,ENT_QUOTES); // XSS is bad, ok? :);
       return true;
     }
     else {
@@ -39,7 +39,7 @@ class CreateTest extends Test {
     // If it's not blank then check that it's less than 500 chars and 
     // set the property.
     elseif ( strlen($message) <= 500 ) {
-      $this->message = $message;
+      $this->message = htmlentities($message,ENT_QUOTES); // XSS is bad, ok? :)
       return true;
     }
     else {
